@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import logo from "@/assets/logo.jpeg";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -152,7 +153,7 @@ const Brand = () => {
                             >
                                 <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-6">
                                     <Sparkles className="mr-2 h-4 w-4" />
-                                    Partenaire Officiel — Spectra Agency
+                                    Collaboration Officielle — The Bequer × Spectra
                                 </div>
 
                                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-tight mb-6">
@@ -160,11 +161,11 @@ const Brand = () => {
                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
                                         marque
                                     </span>{" "}
-                                    avec Spectra
+                                    avec The Bequer &amp; Spectra
                                 </h1>
 
                                 <p className="text-xl text-muted-foreground leading-relaxed mb-8 max-w-2xl">
-                                    De l'idée au lancement, Spectra Agency transforme votre vision en une marque puissante, cohérente et mémorable sur tous les canaux digitaux.
+                                    The Bequer s'associe à Spectra Agency pour vous offrir une solution complète : de la formation cosmétique jusqu'au lancement digital de votre marque, tout est pensé pour vous.
                                 </p>
 
                                 <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
@@ -176,7 +177,7 @@ const Brand = () => {
                                 </div>
                             </motion.div>
 
-                            {/* Right: Spectra Logo Card */}
+                            {/* Right: Collaboration Card */}
                             <motion.div
                                 className="w-full lg:w-96 shrink-0"
                                 initial={{ opacity: 0, x: 30 }}
@@ -187,7 +188,7 @@ const Brand = () => {
                                     {/* Glow */}
                                     <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-3xl blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
                                     <div className="relative bg-black rounded-3xl p-8 border border-white/10 shadow-2xl overflow-hidden text-center">
-                                        {/* Geometric background pattern */}
+                                        {/* Background pattern */}
                                         <div className="absolute inset-0 opacity-10">
                                             {[...Array(6)].map((_, i) => (
                                                 <div key={i} className="absolute border border-white/20 rotate-12"
@@ -198,43 +199,60 @@ const Brand = () => {
                                             ))}
                                         </div>
 
-                                        {/* Logo image — if available, otherwise styled text logo */}
-                                        <div className="relative z-10 flex flex-col items-center">
-                                            <img
-                                                src="/spectra-logo.png"
-                                                alt="Spectra Agency"
-                                                className="w-40 h-40 object-contain mb-4 drop-shadow-2xl"
-                                                onError={(e) => {
-                                                    // Fallback to styled text if image missing
-                                                    (e.target as HTMLImageElement).style.display = "none";
-                                                    const fallback = document.getElementById("spectra-fallback-logo");
-                                                    if (fallback) fallback.style.display = "flex";
-                                                }}
-                                            />
-                                            {/* Fallback logo in CSS if image not found */}
-                                            <div
-                                                id="spectra-fallback-logo"
-                                                className="hidden w-36 h-36 mb-4 items-center justify-center"
-                                            >
-                                                <div className="relative">
-                                                    <div className="text-7xl font-black text-white" style={{
-                                                        fontFamily: "system-ui",
-                                                        textShadow: "0 0 30px rgba(255,255,255,0.5), 2px 2px 0 #888, 4px 4px 0 #666",
-                                                        letterSpacing: "-0.05em"
-                                                    }}>S</div>
+                                        <div className="relative z-10">
+                                            {/* Logos side by side */}
+                                            <div className="flex items-center justify-center gap-4 mb-5">
+                                                {/* The Bequer logo */}
+                                                <div className="flex flex-col items-center">
+                                                    <img
+                                                        src={logo}
+                                                        alt="The Bequer"
+                                                        className="w-16 h-16 object-contain rounded-xl mb-2 drop-shadow-2xl"
+                                                    />
+                                                    <span className="text-white font-black text-sm tracking-widest uppercase">The Bequer</span>
+                                                </div>
+
+                                                {/* X Separator */}
+                                                <div className="flex flex-col items-center px-2">
+                                                    <span className="text-3xl font-black text-white/40">×</span>
+                                                </div>
+
+                                                {/* Spectra logo */}
+                                                <div className="flex flex-col items-center">
+                                                    <img
+                                                        src="/spectra-logo.png"
+                                                        alt="Spectra Agency"
+                                                        className="w-16 h-16 object-contain mb-2 drop-shadow-2xl"
+                                                        onError={(e) => {
+                                                            const el = e.target as HTMLImageElement;
+                                                            el.style.display = "none";
+                                                            const fallback = el.nextElementSibling as HTMLElement;
+                                                            if (fallback) fallback.style.display = "flex";
+                                                        }}
+                                                    />
+                                                    <div className="hidden w-16 h-16 mb-2 items-center justify-center">
+                                                        <div className="text-5xl font-black text-white" style={{ textShadow: "0 0 20px rgba(255,255,255,0.4)" }}>S</div>
+                                                    </div>
+                                                    <span className="text-white font-black text-sm tracking-widest uppercase">Spectra</span>
                                                 </div>
                                             </div>
-                                            <div className="text-white font-black text-3xl tracking-[0.3em] uppercase mb-1">SPECTRA</div>
-                                            <div className="text-white/50 text-xs tracking-widest">AGENCY</div>
-                                        </div>
 
-                                        {/* Stars */}
-                                        <div className="flex justify-center gap-1 mt-4 relative z-10">
-                                            {[...Array(5)].map((_, i) => (
-                                                <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                                            ))}
+                                            {/* Collab label */}
+                                            <div className="bg-white/10 rounded-xl px-4 py-3 mb-4 border border-white/10">
+                                                <p className="text-white/90 text-sm font-semibold mb-1">🤝 Collaboration Exclusive</p>
+                                                <p className="text-white/60 text-xs leading-relaxed">
+                                                    The Bequer &amp; Spectra Agency s'unissent pour créer votre marque cosmétique de A à Z — formulation, identité, digital.
+                                                </p>
+                                            </div>
+
+                                            {/* Stars */}
+                                            <div className="flex justify-center gap-1">
+                                                {[...Array(5)].map((_, i) => (
+                                                    <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                                                ))}
+                                            </div>
+                                            <p className="text-white/50 text-xs mt-2">Partenariat premium & exclusif</p>
                                         </div>
-                                        <p className="text-white/60 text-xs mt-2 relative z-10">Agence digitale premium</p>
                                     </div>
                                 </div>
                             </motion.div>
