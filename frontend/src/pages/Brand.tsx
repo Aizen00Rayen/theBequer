@@ -430,7 +430,7 @@ const Brand = () => {
                                     <h3 className="font-bold text-foreground text-lg">Contactez-nous directement</h3>
 
                                     <a
-                                        href="https://wa.me/213556614740"
+                                        href="https://wa.me/213655380817"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex items-center gap-4 p-4 rounded-xl border border-green-500/20 bg-green-500/5 hover:bg-green-500/10 hover:border-green-500/40 transition-all duration-200 group"
@@ -440,14 +440,14 @@ const Brand = () => {
                                         </div>
                                         <div>
                                             <p className="font-semibold text-foreground">WhatsApp</p>
-                                            <p className="text-sm text-muted-foreground">+213 556 61 47 40</p>
+                                            <p className="text-sm text-muted-foreground">+213 655 38 08 17</p>
                                             <p className="text-xs text-green-500 font-medium mt-0.5">Répondons généralement en moins d'une heure</p>
                                         </div>
                                         <ArrowRight className="h-5 w-5 text-muted-foreground ml-auto group-hover:text-green-500 group-hover:translate-x-1 transition-all" />
                                     </a>
 
                                     <a
-                                        href="mailto:spectra26agency@gmail.com"
+                                        href="mailto:contact@thebequer.tech"
                                         className="flex items-center gap-4 p-4 rounded-xl border border-primary/20 bg-primary/5 hover:bg-primary/10 hover:border-primary/40 transition-all duration-200 group"
                                     >
                                         <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
@@ -455,7 +455,7 @@ const Brand = () => {
                                         </div>
                                         <div>
                                             <p className="font-semibold text-foreground">Email</p>
-                                            <p className="text-sm text-muted-foreground">spectra26agency@gmail.com</p>
+                                            <p className="text-sm text-muted-foreground">contact@thebequer.tech</p>
                                             <p className="text-xs text-primary font-medium mt-0.5">Réponse sous 24h ouvrées</p>
                                         </div>
                                         <ArrowRight className="h-5 w-5 text-muted-foreground ml-auto group-hover:text-primary group-hover:translate-x-1 transition-all" />
@@ -478,7 +478,7 @@ const Brand = () => {
                                         </p>
                                         <div className="flex gap-3 mt-4">
                                             <a
-                                                href="https://wa.me/213556614740"
+                                                href="https://wa.me/213655380817"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="flex items-center gap-2 px-5 py-2.5 bg-green-500 text-white rounded-xl text-sm font-semibold hover:bg-green-600 transition-colors"
